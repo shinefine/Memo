@@ -1,0 +1,17 @@
+通过给Cache文件夹建立软连接指向其它位置的方式改动 缓存存放位置
+
+
+
+1） 取得原始 Cache 目录位置
+
+在Chrome浏览器的地址栏输入Chrome:Version查看Chrome浏览器保存文件的位置。
+
+2）删除Cache文件夹，然后在目标盘建立缓存文件夹
+在你想要保存chrome浏览器缓存的地方 建立一个Cache文件夹(例如我在Z:\chromeCache)
+
+
+3)建立软连接指向
+
+在开始菜单搜索"cmd" 在"cmd"上右键以管理员身份运行，在弹出确认的窗口里点“是”
+在弹出的命令行窗口输入 
+mklink /D "C:\Users\登录用户名\AppData\Local\Google\Chrome\User Data\Default\Cache" "Z:\chromeCache"

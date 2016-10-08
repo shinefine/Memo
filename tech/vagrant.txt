@@ -1,0 +1,11 @@
+vagrant 使用说明：
+
+http://www.ituring.com.cn/Article/131438
+
+vagrant启动时指定provider
+使用命令
+vagrant up --provider=virtualbox
+
+
+
+vagrant 镜像 通用账户 vagrant 密码 vagrant ，root 密码未设置，可使用 sudo passwd root 来给root账户设置一个密码

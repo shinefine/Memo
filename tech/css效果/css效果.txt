@@ -1,0 +1,77 @@
+
+特效合集
+http://www.oschina.net/question/54100_10420
+	星空移动 http://paulrhayes.com/experiments/parallax/
+                 http://www.csdn.net/article/2009-04-07/268521-210234
+
+	太空特效 http://media.24ways.org/2009/15/space.html
+
+
+http://www.webhek.com/demo/parallax
+	--> 超链接特效
+		http://www.webhek.com/misc/link-style
+	--> loading 状态
+		http://www.webhek.com/misc/css-loaders
+		http://www.cnblogs.com/lhb25/archive/2013/12/28/loading-spinners-animated-with-css3.html
+
+元素抖动效果
+	http://www.webhek.com/misc/css-shake
+
+
+滚动时差效果
+
+	http://www.shejidaren.com/css-fixed-scroll-background.html
+
+	http://caibaojian.com/pure-css-parallax-scrolling-websites.html
+
+
+	http://surveyofthestates.com/#for-more-info  教育网站
+
+
+HTML5+CSS3特效幻灯片(impress.js)
+	http://www.webhek.com/misc/impress-js
+
+
+自适应网页设计
+	http://www.webhek.com/misc/responsive-web-design
+
+程序员求职简历
+	http://www.webhek.com/misc/interactive-resume
+
+
+
+
+这个网站有很多css特效 可下载源码
+http://www.html5tricks.com/10-cool-html5-animation-apps.html
+http://www.html5tricks.com/html5-canvas-fullscreen-background.html 炫酷效果
+
+------------------------------
+
+SASS COMPASS介绍
+http://www.ruanyifeng.com/blog/2012/06/sass.html  （介绍了一个在线测试sass的工具）
+
+http://www.ruanyifeng.com/blog/2012/11/compass.html
+
+
+
+
+在线网页设计
+
+https://github.com/silexlabs/Silex
+http://www.silex.me/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

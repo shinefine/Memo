@@ -1,0 +1,6 @@
+
+国内因为gwf网络原因，安装docker镜像困难
+
+解决方法：使用 daocloud 公司提供的国内镜像服务来安装docker镜像，
+
+http://cloud.51cto.com/art/201501/463536.htm
