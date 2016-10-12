@@ -1,0 +1,2 @@
+将js代码翻译成颜文字代码 （可用于混淆加密代码）
+http://utf-8.jp/public/aaencode.html
