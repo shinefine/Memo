@@ -1,0 +1,1 @@
+[Rails Web 安全和 Rails](https://ruby-china.org/topics/31114)   介绍了各种流行的网站攻击技术 csrf ，xss 等，和在rails下如何防范，评论里面有人提供了一个工具用于检测网站漏洞（brakeman）
