@@ -19,7 +19,7 @@ Js 语言特性 promise
 
  问：为什么 new promise () 的参数是个函数 somefunc（该函数带两个参数），而非直接定义两个参数(一个参数对应成功回调函数succ_callback，另一个对应失败回调函数 err_callback) 
 
-答： 因为 promise 承若的代码需要 延迟执行， 所以讲执行代码包装进函数中，在promise 对象里保存这个函数，才能达到延时执行的效果（具体是在调用 promise对象的then（）方法时执行定义时传入的函数）
+答： 因为 promise 承若的代码需要 延迟执行， 所以讲执行代码包装进函数中，在promise 对象里保存这个函数，才能达到延时执行的效果（具体是在调用 promise对象的then（）方法时执行定义时传入的函数）[这里描述不正确，实际上，promise对象new出来时就已经执行了内部的异步代码，调用then（）方法只是取得异步代码的执行结果而已。]
 
 另： 调用then（）方法时传入的两个函数，分别处理成功和失败两种逻辑，在then（）内部实现中，相当于调用 promise.new() 时传入的的那个函数，并将这两个函数作为目标函数(somefunc)的参数传入  
 
@@ -31,3 +31,13 @@ Js 语言特性 promise
 
 将延时函数和 成功/失败 回调函数 联系起来，使得延时函数执行完成后能够回调一个成功/失败 函数。
 
+
+
+----------
+
+
+[【谈谈使用promise时候的一些反模式】](http://www.tuicool.com/articles/FvyQ3a)Promise  几种不同的写法的细微区别，以及如何在一个方法中处理两个promise的返回结果
+[(link2)](http://mp.weixin.qq.com/s?__biz=MzIyMzAwNzExNg==&mid=209354478&idx=1&sn=edd70e826b6f9e8a570024f431c5f7fe&scene=1&key=c76941211a49ab58efed75a0405e3ca61338952103fe9eabf8528d801906e4522737274eecca5489d635a5c1aa5d8b12&ascene=0&uin=MTYxMDY3MjU1&devicetype=iMac+MacBookPro11%2C3+OSX+OSX+10.10.4+build(14E46)&version=11020113&pass_ticket=ws1Ar8vSXgH8%2FuRvUaFkiKCA57pR8100%2BhwA5Ifuc00%3D)
+
+
+[【Javascript 中的神器——Promise】](http://www.jianshu.com/p/063f7e490e9a)介绍了Promise 的几个api函数 join，map，race，all，any
