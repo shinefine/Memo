@@ -21,3 +21,9 @@ npm --registry https://registry.npm.taobao.org info underscore
 3.编辑 ~/.npmrc 加入下面内容
 
 registry = https://registry.npm.taobao.org
+
+********全局安装模块后， require('xxx')报错 Node.js Error: Cannot find module 
+
+解决方法 ： 设置 NODE_PATH 环境变量 值为： npm root -g 显示的路径。
+
+如果使用webstorm 也需要在ide中配置这个环境变量
