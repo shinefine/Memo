@@ -41,3 +41,14 @@ Js 语言特性 promise
 
 
 [【Javascript 中的神器——Promise】](http://www.jianshu.com/p/063f7e490e9a)介绍了Promise 的几个api函数 join，map，race，all，any
+
+[promise详细解释](http://liubin.org/promises-book/#introduction)
+
+------------------
+
+懂了promise后，进阶学习await async 语法
+
+[ 体验异步的终极解决方案-ES7的Async/Await](http://cnodejs.org/topic/5640b80d3a6aa72c5e0030b6)
+看完后再结合看      
+[ 关于JavaScript 的 async/await](http://blog.csdn.net/hj7jay/article/details/61191416)
+基本就弄清楚 async await 的用法了
