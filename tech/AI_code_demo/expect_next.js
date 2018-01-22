@@ -1,4 +1,4 @@
-//çº¦æŸæ¦‚å¿µ
+//Ô¼Êø¸ÅÄî
 class Constraints{
     constructor(condition){
         this.condition= condition;        
@@ -6,7 +6,7 @@ class Constraints{
 }
 
 
-//æ—¶è®¸æ¦‚å¿µ ï¼Œäº‹ä»¶å…ˆåé¡ºåºï¼Œåºåˆ—ï¼Œå› æœå…³ç³»
+//Ê±Ğí¸ÅÄî £¬ÊÂ¼şÏÈºóË³Ğò£¬ĞòÁĞ£¬Òò¹û¹ØÏµ
 class Sequence{
     constructor(base,next){
         this.base= base;       
@@ -16,7 +16,7 @@ class Sequence{
 
   
 
-//åŒç­‰è¿‘ä¹‰æ¦‚å¿µ(ä¸¤ä¸ª/å¤šä¸ªæ¦‚å¿µåœ¨æŸæ–¹é¢å…·æœ‰ä¸€è‡´æ€§)
+//Í¬µÈ½üÒå¸ÅÄî(Á½¸ö/¶à¸ö¸ÅÄîÔÚÄ³·½Ãæ¾ßÓĞÒ»ÖÂĞÔ)
 
 class Similar{
     constructor(){
@@ -40,7 +40,7 @@ function test()
 }
 test()
 
-//-----------------æµ‹è¯•æ¡†æ¶--------------
+//-----------------²âÊÔ¿ò¼Ü--------------
 
 class TestObj{
     constructor(func_result){
