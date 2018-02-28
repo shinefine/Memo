@@ -13,3 +13,8 @@
 
 这篇文章提供了更多资料
 [Reactive Extensions入门](https://www.cnblogs.com/yangecnu/archive/2012/11/03/Introducting_ReactiveExtensions.html)
+
+
+更多信息，单路转换成多路[RxJS 核心概念之Subject](https://segmentfault.com/a/1190000005069851)
+
+[Reactive Extensions (Rx) 入门](http://blog.csdn.net/fangxing80/article/details/7628322)
