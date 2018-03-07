@@ -1,0 +1,446 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh" lang="zh" dir="ltr">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="generator" content="MediaWiki 1.14alpha" />
+		<meta name="keywords" content="贝叶斯定理,CGroup/,MathWorld,PlanetMath,埃立克·魏爾斯史甸,条件概率,條件機率,概率论,機率密度函數,補集,边缘概率" />
+		<link rel="alternate" type="application/x-wiki" title="编辑本页" href="http://zh.wikipedia.org/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=edit" />
+		<link rel="edit" title="编辑本页" href="http://zh.wikipedia.org/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=edit" />
+		<link rel="apple-touch-icon" href="http://zh.wikipedia.org/apple-touch-icon.png" />
+		<link rel="shortcut icon" href="/favicon.ico" />
+		<link rel="search" type="application/opensearchdescription+xml" href="/w/opensearch_desc.php" title="Wikipedia (zh)" />
+		<link rel="copyright" href="http://www.gnu.org/copyleft/fdl.html" />
+		<link rel="alternate" type="application/rss+xml" title="Wikipedia的RSS订阅" href="http://zh.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=rss" />
+		<link rel="alternate" type="application/atom+xml" title="Wikipedia的Atom订阅" href="http://zh.wikipedia.org/w/index.php?title=Special:RecentChanges&amp;feed=atom" />
+		<title>贝叶斯定理 - 维基百科，自由的百科全书</title>
+		<link rel="stylesheet" href="/skins-1.5/common/shared.css?182" type="text/css" media="screen" />
+		<link rel="stylesheet" href="/skins-1.5/common/commonPrint.css?182" type="text/css" media="print" />
+		<link rel="stylesheet" href="/skins-1.5/monobook/main.css?182" type="text/css" media="screen" />
+		<link rel="stylesheet" href="/skins-1.5/chick/main.css?182" type="text/css" media="handheld" />
+		<!--[if lt IE 5.5000]><link rel="stylesheet" href="/skins-1.5/monobook/IE50Fixes.css?182" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 5.5000]><link rel="stylesheet" href="/skins-1.5/monobook/IE55Fixes.css?182" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 6]><link rel="stylesheet" href="/skins-1.5/monobook/IE60Fixes.css?182" type="text/css" media="screen" /><![endif]-->
+		<!--[if IE 7]><link rel="stylesheet" href="/skins-1.5/monobook/IE70Fixes.css?182" type="text/css" media="screen" /><![endif]-->
+		<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Common.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" />
+		<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Print.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="print" />
+		<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Handheld.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" media="handheld" />
+		<link rel="stylesheet" href="/w/index.php?title=MediaWiki:Monobook.css&amp;usemsgcache=yes&amp;ctype=text%2Fcss&amp;smaxage=2678400&amp;action=raw&amp;maxage=2678400" type="text/css" />
+		<link rel="stylesheet" href="/w/index.php?title=-&amp;action=raw&amp;maxage=2678400&amp;gen=css" type="text/css" />
+		<!--[if lt IE 7]><script type="text/javascript" src="/skins-1.5/common/IEFixes.js?182"></script>
+		<meta http-equiv="imagetoolbar" content="no" /><![endif]-->
+		
+		<script type= "text/javascript">/*<![CDATA[*/
+		var skin = "monobook";
+		var stylepath = "/skins-1.5";
+		var wgArticlePath = "/wiki/$1";
+		var wgScriptPath = "/w";
+		var wgScript = "/w/index.php";
+		var wgVariantArticlePath = false;
+		var wgActionPaths = {};
+		var wgServer = "http://zh.wikipedia.org";
+		var wgCanonicalNamespace = "";
+		var wgCanonicalSpecialPageName = false;
+		var wgNamespaceNumber = 0;
+		var wgPageName = "贝叶斯定理";
+		var wgTitle = "贝叶斯定理";
+		var wgAction = "view";
+		var wgArticleId = "319443";
+		var wgIsArticle = true;
+		var wgUserName = null;
+		var wgUserGroups = null;
+		var wgUserLanguage = "zh-cn";
+		var wgContentLanguage = "zh";
+		var wgBreakFrames = false;
+		var wgCurRevisionId = "8528622";
+		var wgVersion = "1.14alpha";
+		var wgEnableAPI = true;
+		var wgEnableWriteAPI = true;
+		var wgMWSuggestTemplate = "http://zh.wikipedia.org/w/api.php?action=opensearch\x26search={searchTerms}\x26namespace={namespaces}";
+		var wgDBname = "zhwiki";
+		var wgSearchNamespaces = [0];
+		var wgMWSuggestMessages = ["有建议", "无建议"];
+		var wgRestrictionEdit = [];
+		var wgRestrictionMove = [];
+		/*]]>*/</script>
+                
+		<script type="text/javascript" src="/skins-1.5/common/wikibits.js?182"><!-- wikibits js --></script>
+		<!-- Head Scripts -->
+		<script type="text/javascript" src="/skins-1.5/common/ajax.js?182"></script>
+		<script type="text/javascript" src="/skins-1.5/common/mwsuggest.js?182"></script>
+<script type="text/javascript">/*<![CDATA[*/
+var wgNotice='';var wgNoticeLocal='';
+/*]]>*/</script>		<script type="text/javascript" src="http://upload.wikimedia.org/centralnotice/wikipedia/zh-cn/centralnotice.js?182"></script>
+		<script type="text/javascript" src="/w/index.php?title=-&amp;action=raw&amp;gen=js&amp;useskin=monobook"><!-- site js --></script>
+	</head>
+<body class="mediawiki ltr ns-0 ns-subject page-贝叶斯定理 skin-monobook">
+	<div id="globalWrapper">
+		<div id="column-content">
+	<div id="content">
+		<a name="top" id="top"></a>
+		<div id="siteNotice"><script type='text/javascript'>if (wgNotice != '') document.writeln(wgNotice);</script></div>		<h1 class="firstHeading">贝叶斯定理</h1>
+		<div id="bodyContent">
+			<h3 id="siteSub">维基百科，自由的百科全书</h3>
+			<div id="contentSub"></div>
+									<div id="jump-to-nav">跳转到: <a href="#column-one">导航</a>, <a href="#searchInput">搜索</a></div>			<!-- start content -->
+			<div class="NavFrame collapsed noprint" style="z-index: 1; margin: 0 0.5em 0.5em auto; top: -1.2em; position: relative; background-color: transparent; border: none;" id="TagConversionHeader">
+<div class="uncollapse toggleHotspot" style="position: absolute; right:0; background-color: transparent; padding: 0; width: 4em;" title="本页使用了标题或全文手工转换，单击查看"><span style="padding:1px 3px; background: slategray; color:white;">汉</span><span style="padding:1px 3px; background: sienna; color:white;">漢</span><span class="toggleShow" style="color:black;">▼</span><span class="toggleHide" style="color:black;">▲</span></div>
+<div class="NavContent" style="position: absolute; display: none; right: 0; top: 1.5em; border: 1px gray solid; background-color: lightyellow; padding: 0.3em; z-index: 100; width: 650px; font-size: 90%;">
+<div style="background: #FFEA88;">为了阅读方便，本文使用<a href="/w/index.php?title=Help:%E4%B8%AD%E6%96%87%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91%E7%9A%84%E7%B9%81%E7%AE%80%E5%A4%84%E7%90%86&amp;variant=zh-cn#.E6.A2.9D.E7.9B.AE.E6.A8.99.E9.A1.8C" title="Help:中文维基百科的繁简处理" class="mw-redirect"><span style="">标题手工转换</span></a>。</div>
+<ul>
+<li>转换标题为：<b>简体：贝叶斯定理；繁體：貝氏定理；</b></li>
+<li>实际标题为：<b>贝叶斯定理</b>；当前显示为：<b>贝叶斯定理</b></li>
+</ul>
+<div style="background: #FFEA88;">为了阅读方便，本文使用<a href="/w/index.php?title=Help:%E4%B8%AD%E6%96%87%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91%E7%9A%84%E7%B9%81%E7%AE%80%E5%A4%84%E7%90%86&amp;variant=zh-cn#.E6.8E.A7.E5.88.B6.E8.87.AA.E5.8A.A8.E8.BD.AC.E6.8D.A2.E7.9A.84.E4.BB.A3.E7.A2.BC" title="Help:中文维基百科的繁简处理" class="mw-redirect"><span style="">全文手工转换</span></a>。转换内容：</div>
+<div style="padding: 3px">
+<ol>
+<li><b>简体：贝叶斯定理；繁體：貝氏定理；</b> 当前用字模式下显示为→<b>贝叶斯定理</b></li>
+</ol>
+</div>
+<div class="NavFrame collapsed" style="background-color: transparent; border: none; margin:0; padding:0;">
+<div class="NavHead" style="background-color: #FFEA88; font-weight: normal; height: 1.5em; text-align: left;">附加说明（对转换结果有疑问时）<span class="NavToggle"><span class="toggleShow">显示↓</span><span class="toggleHide">关闭↑</span></span></div>
+<div class="NavContent">
+<p><a href="/w/index.php?title=Help:%E4%B8%AD%E6%96%87%E7%BB%B4%E5%9F%BA%E7%99%BE%E7%A7%91%E7%9A%84%E7%B9%81%E7%AE%80%E3%80%81%E5%9C%B0%E5%8C%BA%E8%AF%8D%E5%A4%84%E7%90%86&amp;variant=zh-cn" title="Help:中文维基百科的繁简、地区词处理"><span style="">字词转换</span></a>是中文维基的一项自动转换，目的是通过计算机程序自动消除繁简、地区词等不同<b>用字模式</b>的差异，以达到阅读方便。<br />
+字词转换包括全局转换和手动转换，本说明所使用的标题转换和全文转换技术，都属于手动转换。<br /></p>
+由于技术所限，字词转换有时会不稳定，在刚增加标题转换时，由于缓存原因标题不一定马上显示转换后的正确结果。你可以尝试单击<span class="noprint plainlinksneverexpand"><a href="http://zh.wikipedia.org/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=purge&amp;20081113141340" class="external text" title="http://zh.wikipedia.org/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=purge&amp;20081113141340" rel="nofollow"><span title=""><span style="font-weight: bold;">这里</span></span></a></span>进行<a href="/w/index.php?title=Wikipedia:%E7%B6%AD%E5%9F%BA%E7%99%BE%E7%A7%91%E5%B7%A5%E5%85%B7/%E5%BC%B7%E8%BF%AB%E6%9B%B4%E6%96%B0&amp;variant=zh-cn" title="Wikipedia:維基百科工具/強迫更新"><span style="">强制刷新</span></a>。</div>
+</div>
+</div>
+</div>
+<p><b>贝叶斯定理</b>（<span lang="en" xml:lang="en">Bayes theorem</span>），是<a href="/w/index.php?title=%E6%A6%82%E7%8E%87%E8%AE%BA&amp;variant=zh-cn" title="概率论">概率论</a>中的一个结果，它跟<a href="/w/index.php?title=%E9%9A%8F%E6%9C%BA%E5%8F%98%E9%87%8F&amp;variant=zh-cn" title="随机变量">随机变量</a>的<a href="/w/index.php?title=%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87&amp;variant=zh-cn" title="条件概率">条件概率</a>以及<a href="/w/index.php?title=%E8%BE%B9%E7%BC%98%E6%A6%82%E7%8E%87%E5%88%86%E5%B8%83&amp;action=edit&amp;redlink=1" class="new" title="边缘概率分布 (尚未撰写)">边缘概率分布</a>有关。在有些关于概率的解说中，贝叶斯定理(贝叶斯更新）能够告知我们如何利用新证据修改已有的看法。</p>
+<p>通常，事件A在事件B(发生)的条件下的概率，与事件B在事件A的条件下的概率是不一样的；然而，这两者是有确定的关系,贝叶斯定理就是这种关系的陈述。</p>
+<p>作为一个规范的原理，贝叶斯定理对于所有概率的解释是有效的；然而，频率主义者和贝叶斯主义者对于在应用中，概率如何被赋值，有着不同的看法： 频率主义者根据随机事件发生的频率，或者总体样本里面的个数来赋值概率；贝叶斯主义者要根据未知的命题来赋值概率。一个结果就是，贝叶斯主义者有更多的机会使用贝叶斯定理。本文深度讨论了这些争论。</p>
+<table id="toc" class="toc" summary="目录">
+<tr>
+<td>
+<div id="toctitle">
+<h2>目录</h2>
+</div>
+<ul>
+<li class="toclevel-1"><a href="#.E8.B4.9D.E5.8F.B6.E6.96.AF.E5.AE.9A.E7.90.86.E7.9A.84.E9.99.88.E8.BF.B0"><span class="tocnumber">1</span> <span class="toctext">贝叶斯定理的陈述</span></a></li>
+<li class="toclevel-1"><a href="#.E5.BE.9E.E6.A2.9D.E4.BB.B6.E6.A6.82.E7.8E.87.E6.8E.A8.E5.B0.8E.E8.B2.9D.E6.B0.8F.E5.AE.9A.E7.90.86"><span class="tocnumber">2</span> <span class="toctext">从条件概率推导贝叶斯定理</span></a></li>
+<li class="toclevel-1"><a href="#.E4.BA.8C.E4.B8.AD.E6.93.87.E4.B8.80.E7.9A.84.E5.BD.A2.E5.BC.8F"><span class="tocnumber">3</span> <span class="toctext">二中择一的形式</span></a>
+<ul>
+<li class="toclevel-2"><a href="#.E4.BB.A5.E5.8F.AF.E8.83.BD.E6.80.A7.E8.88.87.E7.9B.B8.E4.BC.BC.E7.8E.87.E8.A1.A8.E7.A4.BA.E8.B2.9D.E6.B0.8F.E5.AE.9A.E7.90.86"><span class="tocnumber">3.1</span> <span class="toctext">以可能性与相似率表示贝叶斯定理</span></a></li>
+<li class="toclevel-2"><a href="#.E8.B2.9D.E6.B0.8F.E5.AE.9A.E7.90.86.E8.88.87.E6.A9.9F.E7.8E.87.E5.AF.86.E5.BA.A6"><span class="tocnumber">3.2</span> <span class="toctext">贝叶斯定理与机率密度</span></a></li>
+<li class="toclevel-2"><a href="#.E8.B2.9D.E6.B0.8F.E5.AE.9A.E7.90.86.E7.9A.84.E6.8E.A8.E5.BB.A3"><span class="tocnumber">3.3</span> <span class="toctext">贝叶斯定理的推广</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#.E7.AF.84.E4.BE.8B"><span class="tocnumber">4</span> <span class="toctext">范例</span></a>
+<ul>
+<li class="toclevel-2"><a href="#.E4.BE.8B.E4.B8.80.EF.BC.9A.E9.86.AB.E5.AD.B8.E6.AA.A2.E9.A9.97.E4.B8.AD.E7.9A.84.E9.8C.AF.E8.AA.A4.E9.99.BD.E6.80.A7.E5.8F.8D.E6.87.89"><span class="tocnumber">4.1</span> <span class="toctext">例一：医学检验中的错误阳性反应</span></a></li>
+<li class="toclevel-2"><a href="#.E4.BE.8B.E4.BA.8C.EF.BC.9A.E6.A2.9D.E4.BB.B6.E6.A9.9F.E7.8E.87"><span class="tocnumber">4.2</span> <span class="toctext">例二：条件机率</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1"><a href="#.E5.8F.82.E8.A7.81"><span class="tocnumber">5</span> <span class="toctext">参见</span></a></li>
+<li class="toclevel-1"><a href="#References"><span class="tocnumber">6</span> <span class="toctext">References</span></a>
+<ul>
+<li class="toclevel-2"><a href="#Versions_of_the_essay"><span class="tocnumber">6.1</span> <span class="toctext">Versions of the essay</span></a></li>
+<li class="toclevel-2"><a href="#Commentaries"><span class="tocnumber">6.2</span> <span class="toctext">Commentaries</span></a></li>
+<li class="toclevel-2"><a href="#Additional_material"><span class="tocnumber">6.3</span> <span class="toctext">Additional material</span></a></li>
+</ul>
+</li>
+</ul>
+</td>
+</tr>
+</table>
+<script type="text/javascript">
+//<![CDATA[
+ if (window.showTocToggle) { var tocShowText = "显示"; var tocHideText = "隐藏"; showTocToggle(); } 
+//]]>
+</script>
+<p><a name=".E8.B4.9D.E5.8F.B6.E6.96.AF.E5.AE.9A.E7.90.86.E7.9A.84.E9.99.88.E8.BF.B0"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=edit&amp;section=1" title="编辑段落">编辑</a>]</span> <span class="mw-headline">贝叶斯定理的陈述</span></h2>
+<p>贝叶斯定理是关于随机事件A和B的<a href="/w/index.php?title=%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87&amp;variant=zh-cn" title="条件概率">条件概率</a>和<a href="/w/index.php?title=%E8%BE%B9%E7%BC%98%E6%A6%82%E7%8E%87&amp;variant=zh-cn" title="边缘概率" class="mw-redirect">边缘概率</a>的一则定理。</p>
+<dl>
+<dd><img class="tex" alt="\Pr(A|B) = \frac{\Pr(B | A)\, \Pr(A)}{\Pr(B)}  \propto L(B | A)\, \Pr(A) \!" src="http://upload.wikimedia.org/math/3/3/6/336a7c21a5d4b709cb37a210b2d3046c.png" /></dd>
+</dl>
+<p>其中L(A|B)是在B发生的情况下A发生的可能性。</p>
+<p>在贝叶斯定理中，每个名词都有约定俗成的名称：</p>
+<ul>
+<li>Pr(<i>A</i>)是<i>A</i>的<i><a href="/w/index.php?title=%E5%85%88%E9%AA%8C%E6%A6%82%E7%8E%87&amp;variant=zh-cn" title="先验概率" class="mw-redirect">先验概率</a></i>或<i><a href="/w/index.php?title=%E8%BE%B9%E7%BC%98%E6%A6%82%E7%8E%87&amp;variant=zh-cn" title="边缘概率" class="mw-redirect">边缘概率</a></i>。之所以称为"先验"是因为它不考虑任何<i>B</i>方面的因素。</li>
+<li>Pr(<i>A</i>|<i>B</i>)是已知<i>B</i>发生后<i>A</i>的<i><a href="/w/index.php?title=%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87&amp;variant=zh-cn" title="条件概率">条件概率</a></i>，也由于得自<i>B</i>的取值而被称作<i>A</i>的<a href="/w/index.php?title=%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87&amp;variant=zh-cn" title="后验概率" class="mw-redirect">后验概率</a>。</li>
+<li>Pr(<i>B</i>|<i>A</i>)是已知<i>A</i>发生后<i>B</i>的<i><a href="/w/index.php?title=%E6%9D%A1%E4%BB%B6%E6%A6%82%E7%8E%87&amp;variant=zh-cn" title="条件概率">条件概率</a></i>，也由于得自<i>A</i>的取值而被称作<i>B</i>的<a href="/w/index.php?title=%E5%90%8E%E9%AA%8C%E6%A6%82%E7%8E%87&amp;variant=zh-cn" title="后验概率" class="mw-redirect">后验概率</a>。</li>
+<li>Pr(<i>B</i>)是<i>B</i>的<i><a href="/w/index.php?title=%E5%85%88%E9%AA%8C%E6%A6%82%E7%8E%87&amp;variant=zh-cn" title="先验概率" class="mw-redirect">先验概率</a></i>或<i><a href="/w/index.php?title=%E8%BE%B9%E7%BC%98%E6%A6%82%E7%8E%87&amp;variant=zh-cn" title="边缘概率" class="mw-redirect">边缘概率</a></i>，也作<i><a href="/w/index.php?title=%E6%A8%99%E5%87%86%E5%8C%96%E5%B8%B8%E9%87%8F&amp;action=edit&amp;redlink=1" class="new" title="標准化常量 (尚未撰写)">标准化常量</a>（normalized constant）</i>.</li>
+</ul>
+<p>按这些术语，Bayes定理可表述为：</p>
+<dl>
+<dd>后验概率 = (相似度 * 先验概率)/标准化常量</dd>
+</dl>
+<p>也就是说，后验概率与先验概率和相似度的乘积成正比。</p>
+<p>另外，比例Pr(<i>B</i>|<i>A</i>)/Pr(<i>B</i>)也有时被称作标准相似度（standardised likelihood），Bayes定理可表述为：</p>
+<dl>
+<dd>后验概率 = 标准相似度 * 先验概率</dd>
+</dl>
+<p><a name=".E5.BE.9E.E6.A2.9D.E4.BB.B6.E6.A6.82.E7.8E.87.E6.8E.A8.E5.B0.8E.E8.B2.9D.E6.B0.8F.E5.AE.9A.E7.90.86"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=edit&amp;section=2" title="编辑段落">编辑</a>]</span> <span class="mw-headline">从条件概率推导贝叶斯定理</span></h2>
+<p>根据条件概率的定义 . 在事件<i>B</i>发生的条件下事件 <i>A</i>发生的概率是</p>
+<dl>
+<dd><img class="tex" alt="\Pr(A|B)=\frac{\Pr(A \cap B)}{\Pr(B)}." src="http://upload.wikimedia.org/math/3/6/5/365fe01a91eddd5efe843b6c17985e96.png" /></dd>
+</dl>
+<p>同样地, 在事件<i>A</i>发生的条件下事件 <i>B</i>发生的概率</p>
+<dl>
+<dd><img class="tex" alt="\Pr(B|A) = \frac{\Pr(A \cap B)}{\Pr(A)}. \!" src="http://upload.wikimedia.org/math/f/9/9/f9970e3bd225504bc5c54733bd8e78d2.png" /></dd>
+</dl>
+<p>整理与合并这两个方程式, 我们可以找到</p>
+<dl>
+<dd><img class="tex" alt="\Pr(A|B)\, \Pr(B) = \Pr(A \cap B) = \Pr(B|A)\, \Pr(A). \!" src="http://upload.wikimedia.org/math/8/4/5/845403665eb223ca48d2792d0d9d132b.png" /></dd>
+</dl>
+<p>这个引理有时称作概率乘法规则.上式两边同除以Pr(<i>B</i>), 若Pr(<i>B</i>)是非零的, 我们可以得到贝叶斯 定理:</p>
+<dl>
+<dd><img class="tex" alt="\Pr(A|B) = \frac{\Pr(B|A)\,\Pr(A)}{\Pr(B)}. \!" src="http://upload.wikimedia.org/math/b/2/6/b26222db003c783d5a92815732533810.png" /></dd>
+</dl>
+<p><a name=".E4.BA.8C.E4.B8.AD.E6.93.87.E4.B8.80.E7.9A.84.E5.BD.A2.E5.BC.8F"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=edit&amp;section=3" title="编辑段落">编辑</a>]</span> <span class="mw-headline">二中择一的形式</span></h2>
+<p>贝叶斯定理通常可以再写成下面的形式：</p>
+<dl>
+<dd><img class="tex" alt="\Pr(B) = \Pr(A, B) + \Pr(A^C, B) = \Pr(B|A) \Pr(A) + \Pr(B|A^C) \Pr(A^C)\," src="http://upload.wikimedia.org/math/c/a/9/ca9212b1339fb1cdbd689778d5f0dc50.png" /></dd>
+</dl>
+<p>其中<i>A</i><sup><i>C</i></sup>是A的<a href="/w/index.php?title=%E8%A3%9C%E9%9B%86&amp;variant=zh-cn" title="補集" class="mw-redirect">补集</a>（即非A）。故上式亦可写成：</p>
+<dl>
+<dd><img class="tex" alt="\Pr(A|B) = \frac{\Pr(B | A)\, \Pr(A)}{\Pr(B|A)\Pr(A) + \Pr(B|A^C)\Pr(A^C)}. , \!" src="http://upload.wikimedia.org/math/3/f/f/3ff734f922e2d54119541b69ca27ac03.png" /></dd>
+</dl>
+<p>在更一般化的情况，假设{<i>A</i><sub><i>i</i></sub>}是事件集合里的部份集合，对于任意的<i>A</i><sub><i>i</i></sub>，贝叶斯定理可用下式表示：</p>
+<dl>
+<dd><img class="tex" alt="\Pr(A_i|B) = \frac{\Pr(B | A_i)\, \Pr(A_i)}{\sum_j \Pr(B|A_j)\,\Pr(A_j)} , \!" src="http://upload.wikimedia.org/math/0/e/e/0eefcf18d91289747cb162e5ee3b530f.png" /></dd>
+</dl>
+<p><a name=".E4.BB.A5.E5.8F.AF.E8.83.BD.E6.80.A7.E8.88.87.E7.9B.B8.E4.BC.BC.E7.8E.87.E8.A1.A8.E7.A4.BA.E8.B2.9D.E6.B0.8F.E5.AE.9A.E7.90.86"></a></p>
+<h3><span class="editsection">[<a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=edit&amp;section=4" title="编辑段落">编辑</a>]</span> <span class="mw-headline">以可能性与相似率表示贝叶斯定理</span></h3>
+<div class="boilerplate seealso">
+<dl>
+<dd><small>参见：<a href="/w/index.php?title=%E5%85%A8%E6%A9%9F%E7%8E%87%E5%AE%9A%E7%90%86&amp;action=edit&amp;redlink=1" class="new" title="全機率定理 (尚未撰写)">全机率定理</a></small></dd>
+</dl>
+</div>
+<p>贝叶斯定理亦可由<a href="/w/index.php?title=%E7%9B%B8%E4%BC%BC%E7%8E%87&amp;action=edit&amp;redlink=1" class="new" title="相似率 (尚未撰写)">相似率</a>Λ和<a href="/w/index.php?title=%E5%8F%AF%E8%83%BD%E6%80%A7&amp;action=edit&amp;redlink=1" class="new" title="可能性 (尚未撰写)">可能性</a><i>O</i>表示：</p>
+<dl>
+<dd><img class="tex" alt="O(A|B)=O(A) \cdot \Lambda (A|B) " src="http://upload.wikimedia.org/math/6/a/a/6aa65315e6ae2da1b417789e43b4eb72.png" /></dd>
+</dl>
+<p>其中</p>
+<dl>
+<dd><img class="tex" alt="O(A|B)=\frac{\Pr(A|B)}{\Pr(A^C|B)} \!" src="http://upload.wikimedia.org/math/b/a/0/ba0979860ec4bb0313de55fc8b9c4ba2.png" /></dd>
+</dl>
+<p>定义为B发生时，A发生的可能性（<span lang="en" xml:lang="en">odds</span>）；</p>
+<dl>
+<dd><img class="tex" alt="O(A)=\frac{\Pr(A)}{\Pr(A^C)} \!" src="http://upload.wikimedia.org/math/3/2/a/32a871b266cc6de3967e4cd8ff629c5c.png" /></dd>
+</dl>
+<p>则是A发生的可能性。相似率（Likelihood ratio）则定义为：</p>
+<dl>
+<dd><img class="tex" alt="\Lambda (A|B) = \frac{L(A|B)}{L(A^C|B)} = \frac{\Pr(B|A)}{\Pr(B|A^C)} \!" src="http://upload.wikimedia.org/math/9/6/8/9687f1454a5652c46dde2b9a50c8cee7.png" /></dd>
+</dl>
+<p><a name=".E8.B2.9D.E6.B0.8F.E5.AE.9A.E7.90.86.E8.88.87.E6.A9.9F.E7.8E.87.E5.AF.86.E5.BA.A6"></a></p>
+<h3><span class="editsection">[<a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=edit&amp;section=5" title="编辑段落">编辑</a>]</span> <span class="mw-headline">贝叶斯定理与机率密度</span></h3>
+<p>贝叶斯定理亦可用于连续机率分布。由于<a href="/w/index.php?title=%E6%A9%9F%E7%8E%87%E5%AF%86%E5%BA%A6%E5%87%BD%E6%95%B8&amp;variant=zh-cn" title="機率密度函數">机率密度函数</a>严格上并非机率，由机率密度函数导出贝叶斯定理观念上较为困难（详细推导参阅<sup id="_ref-0" class="reference"><a href="#_note-0" title="">[1]</a></sup>）。贝叶斯定理与机率密度的关系是由求极限的方式建立：</p>
+<dl>
+<dd><img class="tex" alt=" f(x|y) = \frac{f(x,y)}{f(y)} = \frac{f(y|x)\,f(x)}{f(y)} \!" src="http://upload.wikimedia.org/math/4/0/2/402214a6b5fb1babe545afc206a96d92.png" /></dd>
+</dl>
+<p>全机率定理则有类似的论述：</p>
+<dl>
+<dd><img class="tex" alt=" f(x|y) = \frac{f(y|x)\,f(x)}{\int_{-\infty}^{\infty} f(y|x)\,f(x)\,dx}.
+\!" src="http://upload.wikimedia.org/math/9/0/8/908da7e26f756ae79f5ac0bfce87c5ce.png" /></dd>
+</dl>
+<p>如同离散的情况，公式中的每项均有名称。 <i>f</i>(<i>x</i>, <i>y</i>)是<i>X</i>和<i>Y</i>的联合分布； <i>f</i>(<i>x</i>|<i>y</i>) 是给定<i>Y</i>=<i>y</i>后，<i>X</i>的后验分布； <i>f</i>(<i>y</i>|<i>x</i>) = <i>L</i>(<i>x</i>|<i>y</i>)是<i>Y</i>=<i>y</i>后，<i>X</i>的相似度函数（为<i>x</i>的函数)； <i>f</i>(<i>x</i>) 和<i>f</i>(<i>y</i>)则是<i>X</i>和<i>Y</i>的边际分布； <i>f</i>(<i>x</i>)则是<i>X</i>的先验分布。 为了方便起见，这里的<i>f</i>在这些专有名词中代表不同的函数（可以由引数的不同判断之）。</p>
+<p><br /></p>
+<p><a name=".E8.B2.9D.E6.B0.8F.E5.AE.9A.E7.90.86.E7.9A.84.E6.8E.A8.E5.BB.A3"></a></p>
+<h3><span class="editsection">[<a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=edit&amp;section=6" title="编辑段落">编辑</a>]</span> <span class="mw-headline">贝叶斯定理的推广</span></h3>
+<p>对于变量有二个以上的情况，贝式定理亦成立。例如：</p>
+<dl>
+<dd><img class="tex" alt=" \Pr(A|B,C) = \frac{\Pr(A) \, \Pr(B|A) \, \Pr(C|A,B)}{\Pr(B) \, \Pr(C|B)} \!" src="http://upload.wikimedia.org/math/d/5/0/d507dd87a1d0ecc61996c5f9d1a2186f.png" /></dd>
+</dl>
+<p>这个式子可以由套用多次二个变量的贝式定理及<a href="/w/index.php?title=%E6%A2%9D%E4%BB%B6%E6%A9%9F%E7%8E%87&amp;variant=zh-cn" title="條件機率" class="mw-redirect">条件机率</a>的定义导出：</p>
+<dl>
+<dd><img class="tex" alt=" \Pr(A|B,C) = \frac{\Pr(A,B,C)}{\Pr(B,C)} = \frac{\Pr(A,B,C)}{\Pr(B) \, \Pr(C|B)} = " src="http://upload.wikimedia.org/math/a/2/3/a230e574726b703dbae74af96c2f2731.png" /></dd>
+<dd><img class="tex" alt=" = \frac{\Pr(C|A,B) \, \Pr(A,B)}{\Pr(B) \, \Pr(C|B)} = \frac{\Pr(A) \, \Pr(B|A) \, \Pr(C|A,B)}{\Pr(B) \, \Pr(C|B)} ." src="http://upload.wikimedia.org/math/7/c/2/7c21f23ab0d44c0a0768e129ec9d5c89.png" /></dd>
+</dl>
+<p>一般化的方法则是利用<a href="/w/index.php?title=%E8%81%AF%E5%90%88%E6%A9%9F%E7%8E%87&amp;action=edit&amp;redlink=1" class="new" title="聯合機率 (尚未撰写)">联合机率</a>去分解待求的条件机率，并对不加以探讨的变量积分（意即对欲探讨的变量计算边缘机率）。取决于不同的分解形式，可以证明某些积分必为1，因此分解形式可被简化。利用这个性质，贝叶斯定理的计算量可能可以大幅下降。<a href="/w/index.php?title=%E8%B2%9D%E6%B0%8F%E7%B6%B2%E8%B7%AF&amp;action=edit&amp;redlink=1" class="new" title="貝氏網路 (尚未撰写)">贝氏网络</a>为此方法的一个例子，<a href="/w/index.php?title=%E8%B2%9D%E6%B0%8F%E7%B6%B2%E8%B7%AF&amp;action=edit&amp;redlink=1" class="new" title="貝氏網路 (尚未撰写)">贝氏网络</a>指定数个变量的<a href="/w/index.php?title=%E8%81%AF%E5%90%88%E6%A9%9F%E7%8E%87%E5%88%86%E4%BD%88&amp;action=edit&amp;redlink=1" class="new" title="聯合機率分佈 (尚未撰写)">联合机率分布</a>的分解型式，该机率分布满足下述条件：当其他变量的条件机率给定时，该变量的条件机率为一简单型式。</p>
+<p><a name=".E7.AF.84.E4.BE.8B"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=edit&amp;section=7" title="编辑段落">编辑</a>]</span> <span class="mw-headline">范例</span></h2>
+<p><a name=".E4.BE.8B.E4.B8.80.EF.BC.9A.E9.86.AB.E5.AD.B8.E6.AA.A2.E9.A9.97.E4.B8.AD.E7.9A.84.E9.8C.AF.E8.AA.A4.E9.99.BD.E6.80.A7.E5.8F.8D.E6.87.89"></a></p>
+<h3><span class="editsection">[<a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=edit&amp;section=8" title="编辑段落">编辑</a>]</span> <span class="mw-headline">例一：医学检验中的错误阳性反应</span></h3>
+<p><a name=".E4.BE.8B.E4.BA.8C.EF.BC.9A.E6.A2.9D.E4.BB.B6.E6.A9.9F.E7.8E.87"></a></p>
+<h3><span class="editsection">[<a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=edit&amp;section=9" title="编辑段落">编辑</a>]</span> <span class="mw-headline">例二：条件机率</span></h3>
+<p><a name=".E5.8F.82.E8.A7.81"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=edit&amp;section=10" title="编辑段落">编辑</a>]</span> <span class="mw-headline">参见</span></h2>
+<ul>
+<li><a href="/w/index.php?title=%E6%A6%82%E7%8E%87%E8%AE%BA&amp;variant=zh-cn" title="概率论">概率论</a></li>
+</ul>
+<p><a name="References" id="References"></a></p>
+<h2><span class="editsection">[<a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=edit&amp;section=11" title="编辑段落">编辑</a>]</span> <span class="mw-headline">References</span></h2>
+<p><a name="Versions_of_the_essay" id="Versions_of_the_essay"></a></p>
+<h3><span class="editsection">[<a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=edit&amp;section=12" title="编辑段落">编辑</a>]</span> <span class="mw-headline">Versions of the essay</span></h3>
+<ul>
+<li>Thomas Bayes (1763), "An Essay towards solving a Problem in the Doctrine of Chances. By the late Rev. Mr. Bayes, F. R. S. communicated by Mr. Price, in a letter to John Canton, A. M. F. R. S.", <i><a href="/w/index.php?title=Philosophical_Transactions&amp;action=edit&amp;redlink=1" class="new" title="Philosophical Transactions (尚未撰写)">Philosophical Transactions, Giving Some Account of the Present Undertakings, Studies and Labours of the Ingenious in Many Considerable Parts of the World</a></i> 53:370–418.</li>
+<li>Thomas Bayes (1763/1958) "Studies in the History of Probability and Statistics: IX. Thomas Bayes's Essay Towards Solving a Problem in the Doctrine of Chances", <i><a href="/w/index.php?title=Biometrika&amp;action=edit&amp;redlink=1" class="new" title="Biometrika (尚未撰写)">Biometrika</a></i> 45:296–315. <i>(Bayes's essay in modernized notation)</i></li>
+<li>Thomas Bayes <a href="http://www.stat.ucla.edu/history/essay.pdf" class="external text" title="http://www.stat.ucla.edu/history/essay.pdf" rel="nofollow">"An essay towards solving a Problem in the Doctrine of Chances"</a>. <i>(Bayes's essay in the original notation)</i></li>
+</ul>
+<p><a name="Commentaries" id="Commentaries"></a></p>
+<h3><span class="editsection">[<a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=edit&amp;section=13" title="编辑段落">编辑</a>]</span> <span class="mw-headline">Commentaries</span></h3>
+<ul>
+<li><a href="/w/index.php?title=George_Alfred_Barnard&amp;action=edit&amp;redlink=1" class="new" title="George Alfred Barnard (尚未撰写)">G. A. Barnard</a> (1958) "Studies in the History of Probability and Statistics: IX. Thomas Bayes's Essay Towards Solving a Problem in the Doctrine of Chances", <i>Biometrika</i> 45:293–295. <i>(biographical remarks)</i></li>
+<li>Daniel Covarrubias. <a href="http://www.stat.rice.edu/~blairc/seminar/Files/danTalk.pdf" class="external text" title="http://www.stat.rice.edu/~blairc/seminar/Files/danTalk.pdf" rel="nofollow">"An Essay Towards Solving a Problem in the Doctrine of Chances"</a>. <i>(an outline and exposition of Bayes's essay)</i></li>
+<li>Stephen M. Stigler (1982). "Thomas Bayes's Bayesian Inference," <i>Journal of the Royal Statistical Society</i>, Series A, 145:250–258. <i>(Stigler argues for a revised interpretation of the essay; recommended)</i></li>
+<li><a href="/w/index.php?title=Isaac_Todhunter&amp;action=edit&amp;redlink=1" class="new" title="Isaac Todhunter (尚未撰写)">Isaac Todhunter</a> (1865). <i>A History of the Mathematical Theory of Probability from the time of Pascal to that of Laplace</i>, Macmillan. Reprinted 1949, 1956 by Chelsea and 2001 by Thoemmes.</li>
+</ul>
+<p><a name="Additional_material" id="Additional_material"></a></p>
+<h3><span class="editsection">[<a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=edit&amp;section=14" title="编辑段落">编辑</a>]</span> <span class="mw-headline">Additional material</span></h3>
+<ul>
+<li>Pierre-Simon Laplace (1774). "Mémoire sur la Probabilité des Causes par les Événements", <i>Savants Étranges</i> 6:621–656; also <i>Œuvres</i> 8:27–65.</li>
+<li>Pierre-Simon Laplace (1774/1986). "Memoir on the Probability of the Causes of Events", <i>Statistical Science</i> 1(3):364–378.</li>
+<li>Stephen M. Stigler (1986). "Laplace's 1774 memoir on inverse probability", <i>Statistical Science</i> 1(3):359–378.</li>
+<li>Stephen M. Stigler (1983). "Who Discovered Bayes's Theorem?" <i>The American Statistician</i> 37(4):290–296.</li>
+<li>Jeff Miller et al. <a href="http://members.aol.com/jeff570/mathword.html" class="external text" title="http://members.aol.com/jeff570/mathword.html" rel="nofollow">Earliest Known Uses of Some of the Words of Mathematics (B)</a>. (<i>very informative; recommended</i>)</li>
+<li><a href="/w/index.php?title=Athanasios_Papoulis&amp;action=edit&amp;redlink=1" class="new" title="Athanasios Papoulis (尚未撰写)">Athanasios Papoulis</a> (1984). <i>Probability, Random Variables, and Stochastic Processes</i>, second edition. New York: McGraw-Hill.</li>
+<li>James Joyce (2003). <a href="http://plato.stanford.edu/entries/bayes-theorem/" class="external text" title="http://plato.stanford.edu/entries/bayes-theorem/" rel="nofollow">"Bayes's Theorem"</a>, <i><a href="/w/index.php?title=Stanford_Encyclopedia_of_Philosophy&amp;action=edit&amp;redlink=1" class="new" title="Stanford Encyclopedia of Philosophy (尚未撰写)">Stanford Encyclopedia of Philosophy</a></i>.</li>
+<li><a href="http://www.inference.phy.cam.ac.uk/mackay/itila/" class="external text" title="http://www.inference.phy.cam.ac.uk/mackay/itila/" rel="nofollow">The on-line textbook: Information Theory, Inference, and Learning Algorithms</a>, by <a href="/w/index.php?title=David_J.C._MacKay&amp;action=edit&amp;redlink=1" class="new" title="David J.C. MacKay (尚未撰写)">David J.C. MacKay</a> provides an up to date overview of the use of Bayes's theorem in information theory and machine learning.</li>
+<li><a href="http://plato.stanford.edu/entries/bayes-theorem/" class="external text" title="http://plato.stanford.edu/entries/bayes-theorem/" rel="nofollow">Stanford Encyclopedia of Philosophy: Bayes's Theorem</a> provides a comprehensive introduction to Bayes's theorem.</li>
+<li><a href="/w/index.php?title=%E5%9F%83%E7%AB%8B%E5%85%8B%C2%B7%E9%AD%8F%E7%88%BE%E6%96%AF%E5%8F%B2%E7%94%B8&amp;variant=zh-cn" title="埃立克·魏爾斯史甸">埃立克·魏尔斯史甸</a>于<a href="/w/index.php?title=MathWorld&amp;variant=zh-cn" title="MathWorld">MathWorld</a>中所述之<a href="http://mathworld.wolfram.com/BayesTheorem.html" class="external text" title="http://mathworld.wolfram.com/BayesTheorem.html" rel="nofollow">Bayes' Theorem</a>。</li>
+<li><i><a href="http://planetmath.org/encyclopedia/BayesTheorem.html" class="external text" title="http://planetmath.org/encyclopedia/BayesTheorem.html" rel="nofollow">Bayes' theorem</a></i> at <a href="/w/index.php?title=PlanetMath&amp;variant=zh-cn" title="PlanetMath">PlanetMath</a>.</li>
+</ul>
+
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 1267/1000000
+Post-expand include size: 8641/2048000 bytes
+Template argument size: 768/2048000 bytes
+Expensive parser function count: 10/500
+-->
+
+<!-- Saved in parser cache with key zhwiki:pcache:idhash:319443-0!1!0!!zh-cn!2!zh-cn and timestamp 20081113141342 -->
+<div class="printfooter">
+取自"<a href="http://zh.wikipedia.org/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;variant=zh-cn">http://zh.wikipedia.org/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;variant=zh-cn</a>"</div>
+			<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="/w/index.php?title=Special:Categories&amp;variant=zh-cn" title="Special:Categories">2个分类</a>:&#32;<span dir='ltr'><a href="/w/index.php?title=Category:%E6%A6%82%E7%8E%87%E8%AE%BA&amp;variant=zh-cn" title="Category:概率论">概率论</a></span> | <span dir='ltr'><a href="/w/index.php?title=Category:%E6%95%B0%E5%AD%A6%E5%AE%9A%E7%90%86&amp;variant=zh-cn" title="Category:数学定理">数学定理</a></span></div></div>			<!-- end content -->
+						<div class="visualClear"></div>
+		</div>
+	</div>
+		</div>
+		<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>查看</h5>
+		<div class="pBody">
+			<ul>
+	
+				 <li id="ca-nstab-main" class="selected"><a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;variant=zh-cn" title="查看页面内容 [c]" accesskey="c">条目</a></li>
+				 <li id="ca-talk"><a href="/w/index.php?title=Talk:%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;variant=zh-cn" title="关于条目正文的讨论 [t]" accesskey="t">讨论</a></li>
+				 <li id="ca-edit"><a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=edit" title="你可编辑此页。请在保存前先预览一下。 [e]" accesskey="e">编辑本页</a></li>
+				 <li id="ca-history"><a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;action=history" title="本页面的早前版本。 [h]" accesskey="h">历史</a></li>
+				 <li id="ca-varlang-0"><a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;variant=zh">不转换</a></li>
+				 <li id="ca-varlang-1"><a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;variant=zh-hans">简体</a></li>
+				 <li id="ca-varlang-2"><a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;variant=zh-hant">繁體</a></li>
+				 <li id="ca-varlang-3" class="selected"><a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;variant=zh-cn">大陆简体</a></li>
+				 <li id="ca-varlang-4"><a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;variant=zh-hk">港澳繁體</a></li>
+				 <li id="ca-varlang-5"><a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;variant=zh-sg">马新简体</a></li>
+				 <li id="ca-varlang-6"><a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;variant=zh-tw">台灣正體</a></li>			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>个人工具</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="/w/index.php?title=Special:UserLogin&amp;returnto=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86" title="建议你登录，尽管并非必须。 [o]" accesskey="o">登录／创建账户</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a style="background-image: url(http://upload.wikimedia.org/wikipedia/zh/b/bc/Wiki.png);" href="/w/index.php?title=%E9%A6%96%E9%A1%B5&amp;variant=zh-cn" title="访问首页 [z]" accesskey="z"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">搜索</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="/w/index.php?title=Special:Search&amp;amp;variant=zh-cn" id="searchform"><div>
+				<input id="searchInput" name="search" type="text" title="搜索维基百科 [f]" accesskey="f" value="" />
+				<input type='submit' name="go" class="searchButton" id="searchGoButton"	value="进入" title="如果相同的标题存在的话便直接前往该页面" />&nbsp;
+				<input type='submit' name="fulltext" class="searchButton" id="mw-searchButton" value="搜索" title="搜索该文字的页面" />
+			</div></form>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-navigation'>
+		<h5>导航</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="/w/index.php?title=%E9%A6%96%E9%A1%B5&amp;variant=zh-cn" title="访问首页 [z]" accesskey="z">首页</a></li>
+				<li id="n-indexpage"><a href="/w/index.php?title=Wikipedia:%E5%88%86%E9%A1%9E%E7%B4%A2%E5%BC%95&amp;variant=zh-cn">分类索引</a></li>
+				<li id="n-Featured_content"><a href="/w/index.php?title=Portal:%E7%89%B9%E8%89%B2%E5%85%A7%E5%AE%B9&amp;variant=zh-cn">特色内容</a></li>
+				<li id="n-currentevents"><a href="/w/index.php?title=Portal:%E6%96%B0%E8%81%9E%E5%8B%95%E6%85%8B&amp;variant=zh-cn" title="提供当前新闻事件的背景资料">新闻动态</a></li>
+				<li id="n-recentchanges"><a href="/w/index.php?title=Special:RecentChanges&amp;variant=zh-cn" title="列出维基百科中的最近修改 [r]" accesskey="r">最近更改</a></li>
+				<li id="n-randompage"><a href="/w/index.php?title=Special:Random&amp;variant=zh-cn" title="随机载入一个页面 [x]" accesskey="x">随机页面</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class='generated-sidebar portlet' id='p-help'>
+		<h5>帮助</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-help"><a href="/w/index.php?title=Help:%E7%9B%AE%E5%BD%95&amp;variant=zh-cn" title="寻求帮助">帮助</a></li>
+				<li id="n-portal"><a href="/w/index.php?title=Wikipedia:%E7%A4%BE%E5%8C%BA%E4%B8%BB%E9%A1%B5&amp;variant=zh-cn" title="关于本计划、你可以做什么、应该如何做">社区</a></li>
+				<li id="n-policy"><a href="/w/index.php?title=Wikipedia:%E6%96%B9%E9%87%9D%E8%88%87%E6%8C%87%E5%BC%95&amp;variant=zh-cn">方针与指引</a></li>
+				<li id="n-villagepump"><a href="/w/index.php?title=Wikipedia:%E4%BA%92%E5%8A%A9%E5%AE%A2%E6%A0%88&amp;variant=zh-cn">互助客栈</a></li>
+				<li id="n-Information_desk"><a href="/w/index.php?title=Wikipedia:%E8%A9%A2%E5%95%8F%E8%99%95&amp;variant=zh-cn">询问处</a></li>
+				<li id="n-conversion"><a href="/w/index.php?title=Wikipedia:%E5%AD%97%E8%AF%8D%E8%BD%AC%E6%8D%A2%E8%AF%B7%E6%B1%82%E6%88%96%E5%80%99%E9%80%89&amp;variant=zh-cn">字词转换</a></li>
+				<li id="n-contact"><a href="/w/index.php?title=Wikipedia:%E8%81%94%E7%B3%BB%E6%88%91%E4%BB%AC&amp;variant=zh-cn">联系我们</a></li>
+				<li id="n-about"><a href="/w/index.php?title=Wikipedia:%E5%85%B3%E4%BA%8E&amp;variant=zh-cn">关于维基百科</a></li>
+				<li id="n-sitesupport"><a href="http://wikimediafoundation.org/wiki/%E8%B5%84%E5%8A%A9" title="如果您在维基百科受益良多，您可以考虑资助我们">资助维基百科</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>工具箱</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="/w/index.php?title=Special:WhatLinksHere/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;variant=zh-cn" title="列出所有与本页相链的页面 [j]" accesskey="j">链入页面</a></li>
+				<li id="t-recentchangeslinked"><a href="/w/index.php?title=Special:RecentChangesLinked/%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;variant=zh-cn" title="页面链出所有页面的更改 [k]" accesskey="k">链出更改</a></li>
+<li id="t-upload"><a href="/wiki/Project:%E4%B8%8A%E4%BC%A0" title="上传图像或多媒体文件 [u]" accesskey="u">上传文件</a></li>
+<li id="t-specialpages"><a href="/w/index.php?title=Special:SpecialPages&amp;variant=zh-cn" title="全部特殊页面的列表 [q]" accesskey="q">特殊页面</a></li>
+				<li id="t-print"><a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;variant=zh-cn&amp;printable=yes" title="这个页面的可打印版本 [p]" accesskey="p">可打印版</a></li>				<li id="t-permalink"><a href="/w/index.php?title=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;oldid=8528622" title="这个页面版本的永久链接">永久链接</a></li><li id="t-cite"><a href="/w/index.php?title=Special:Cite&amp;page=%E8%B4%9D%E5%8F%B6%E6%96%AF%E5%AE%9A%E7%90%86&amp;id=8528622">引用此文</a></li>			</ul>
+		</div>
+	</div>
+	<div id="p-lang" class="portlet">
+		<h5>其他语言</h5>
+		<div class="pBody">
+			<ul>
+				<li class="interwiki-ar"><a href="http://ar.wikipedia.org/wiki/%D9%85%D8%A8%D8%B1%D9%87%D9%86%D8%A9_%D8%A8%D8%A7%D9%8A%D8%B2">العربية</a></li>
+				<li class="interwiki-bg"><a href="http://bg.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%BD%D0%B0_%D0%91%D0%B5%D0%B9%D1%81">Български</a></li>
+				<li class="interwiki-ca"><a href="http://ca.wikipedia.org/wiki/Teorema_de_Bayes">Català</a></li>
+				<li class="interwiki-de"><a href="http://de.wikipedia.org/wiki/Bayestheorem">Deutsch</a></li>
+				<li class="interwiki-en"><a href="http://en.wikipedia.org/wiki/Bayes%27_theorem">English</a></li>
+				<li class="interwiki-es"><a href="http://es.wikipedia.org/wiki/Teorema_de_Bayes">Español</a></li>
+				<li class="interwiki-fi"><a href="http://fi.wikipedia.org/wiki/Bayesin_teoreema">Suomi</a></li>
+				<li class="interwiki-fr"><a href="http://fr.wikipedia.org/wiki/Th%C3%A9or%C3%A8me_de_Bayes">Français</a></li>
+				<li class="interwiki-he"><a href="http://he.wikipedia.org/wiki/%D7%97%D7%95%D7%A7_%D7%91%D7%99%D7%99%D7%A1">עברית</a></li>
+				<li class="interwiki-is"><a href="http://is.wikipedia.org/wiki/Form%C3%BAla_Bayes">Íslenska</a></li>
+				<li class="interwiki-it"><a href="http://it.wikipedia.org/wiki/Teorema_di_Bayes">Italiano</a></li>
+				<li class="interwiki-ja"><a href="http://ja.wikipedia.org/wiki/%E3%83%99%E3%82%A4%E3%82%BA%E3%81%AE%E5%AE%9A%E7%90%86">日本語</a></li>
+				<li class="interwiki-ko"><a href="http://ko.wikipedia.org/wiki/%EB%B2%A0%EC%9D%B4%EC%A6%88_%EC%A0%95%EB%A6%AC">한국어</a></li>
+				<li class="interwiki-lt"><a href="http://lt.wikipedia.org/wiki/Bajeso_teorema">Lietuvių</a></li>
+				<li class="interwiki-mn"><a href="http://mn.wikipedia.org/wiki/%D0%91%D0%B0%D0%B9%D0%B5%D1%81%D1%8B%D0%BD_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC">Монгол</a></li>
+				<li class="interwiki-nl"><a href="http://nl.wikipedia.org/wiki/Theorema_van_Bayes">Nederlands</a></li>
+				<li class="interwiki-pl"><a href="http://pl.wikipedia.org/wiki/Twierdzenie_Bayesa">Polski</a></li>
+				<li class="interwiki-pms"><a href="http://pms.wikipedia.org/wiki/F%C3%B3rmola_%C3%ABd_Bayes">Piemontèis</a></li>
+				<li class="interwiki-pt"><a href="http://pt.wikipedia.org/wiki/Teorema_de_Bayes">Português</a></li>
+				<li class="interwiki-ro"><a href="http://ro.wikipedia.org/wiki/Teorema_lui_Bayes">Română</a></li>
+				<li class="interwiki-ru"><a href="http://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0_%D0%91%D0%B0%D0%B9%D0%B5%D1%81%D0%B0">Русский</a></li>
+				<li class="interwiki-sr"><a href="http://sr.wikipedia.org/wiki/%D0%91%D0%B0%D1%98%D0%B5%D1%81%D0%BE%D0%B2%D0%B0_%D1%82%D0%B5%D0%BE%D1%80%D0%B5%D0%BC%D0%B0">Српски / Srpski</a></li>
+				<li class="interwiki-su"><a href="http://su.wikipedia.org/wiki/T%C3%A9or%C3%A9ma_Bayes">Basa Sunda</a></li>
+				<li class="interwiki-sv"><a href="http://sv.wikipedia.org/wiki/Bayes_sats">Svenska</a></li>
+				<li class="interwiki-tr"><a href="http://tr.wikipedia.org/wiki/Bayes_teoremi">Türkçe</a></li>
+				<li class="interwiki-ur"><a href="http://ur.wikipedia.org/wiki/%D8%A8%DB%92%D8%B2_%D9%85%D8%B3%D9%84%D8%A6%DB%81_%D8%A7%D8%AB%D8%A8%D8%A7%D8%AA%DB%8C">اردو</a></li>
+				<li class="interwiki-vi"><a href="http://vi.wikipedia.org/wiki/%C4%90%E1%BB%8Bnh_l%C3%BD_Bayes">Tiếng Việt</a></li>
+			</ul>
+		</div>
+	</div>
+		</div><!-- end of the left (by default at least) column -->
+			<div class="visualClear"></div>
+			<div id="footer">
+				<div id="f-poweredbyico"><a href="http://www.mediawiki.org/"><img src="/skins-1.5/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" /></a></div>
+				<div id="f-copyrightico"><a href="http://wikimediafoundation.org/"><img src="/images/wikimedia-button.png" border="0" alt="Wikimedia Foundation"/></a></div>
+			<ul id="f-list">
+				<li id="lastmod"> 这页的最后修订在 2008年11月11日 (星期二) 09:07。</li>
+				<li id="copyright">本站的全部文本内容在<a class="internal" href="/w/index.php?title=Wikipedia:GNU%E8%87%AA%E7%94%B1%E6%96%87%E6%A1%A3%E8%AE%B8%E5%8F%AF%E8%AF%81%E6%96%87%E6%9C%AC&amp;variant=zh-cn" title="Wikipedia:GNU自由文档许可证文本">GNU自由文档许可证</a>之条款下提供（<b><a class="internal" href="/w/index.php?title=Wikipedia:%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF&amp;variant=zh-cn">详情</a></b>）。<br />
+Wikipedia&reg;是<a href="http://www.wikimediafoundation.org">维基媒体基金会</a>的注册商标；维基&trade;是维基媒体基金会的商标。<br />维基媒体基金会是在美国佛罗里达州登记的501(c)(3)<a href="http://wikimediafoundation.org/wiki/%E8%B5%84%E5%8A%A9%E7%9A%84%E5%85%8D%E7%A8%8E%E6%94%BF%E7%AD%96">免税</a>、非营利、慈善机构。<br /></li>
+				<li id="privacy"><a href="http://wikimediafoundation.org/wiki/%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96" title="wikimedia:隐私政策">隐私政策</a></li>
+				<li id="about"><a href="/w/index.php?title=Wikipedia:%E5%85%B3%E4%BA%8E&amp;variant=zh-cn" title="Wikipedia:关于">关于维基百科</a></li>
+				<li id="disclaimer"><a href="/w/index.php?title=Wikipedia:%E5%85%8D%E8%B4%A3%E5%A3%B0%E6%98%8E&amp;variant=zh-cn" title="Wikipedia:免责声明">免责声明</a></li>
+			</ul>
+		</div>
+</div>
+
+		<script type="text/javascript">if (window.runOnloadHook) runOnloadHook();</script>
+<!-- Served by srv180 in 1.731 secs. --></body></html>

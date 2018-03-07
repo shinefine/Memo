@@ -1,3 +1,80 @@
+2018-2-23 模式与元模式
+
+模式操作数据，处理信息，元模式则以模式作为数据，产生新的模式，
+举个例子，模式类似于编程语言中的函数， 函数处理数据值，对象等信息，那么有没有某种函数（高阶函数）能够用来传给它一个函数，它返回出来另一个函数（类似lisp里面的 curring？ 这里这个高阶函数并不等同于curring能力），甚至可以传入一定定制数据，然后这个函数可以构造出一个新函数（类似ruby里面的元编程）。 
+
+
+//模式_低维拓展 (详细化一个特定的位置)
+HPDownExpand(obj, target_prop, destnation){
+	
+}
+HPAdustSeq(obj,target_seq,destnation_seq){
+
+}
+
+
+HP1:  概念关联特性  (x__link__y),种属描述(M__link__S)
+
+需要一个     概念关联特性(relationModel),如果传入 食物具备味道这个常识概念的话,则
+{
+	
+	master:"食物"
+	relation:"具备特性"
+	slave:"味道"
+
+}
+需要一个  种属描述 特性(categoryModel), 如果传入 "水果是一种食物" ,则
+{
+	master:"水果"
+	relation:"种类所属"
+	slave:"食物"
+}
+
+require: relationModel categoryModel, relationModel .master == categoryModel.slave
+
+
+如果上面两个条件都满足了,则一个新的模式会产生出来:
+
+{
+  master:"水果"  {self.conditions(inputParam).categoryModel.master}
+ relation:"具备特性"{self.conditions.relationModel.relation}
+	slave:"味道"{self.conditions.relationModel.slave}
+}
+
+
+
+HP2:
+
+
+
+
+
+
+
+
+
+
+
+
+
+col:[[好吃,味道],[难吃,味道]]
+{味道:[好吃,难吃]}
+好吃   ----对义词,同义词----> 难吃
+反义:
+Pattern1: "食物具备味道"   (概念关联特性) 
+Pattern2: "水果是一种食物"  (种属描述)
+p1+p2 ---- ---->p3:"水果具备味道"
+
+
+---------------------------------------------
+2018-2-22
+ 核心就是两个模型 什么的什么是什么(xx的yy是zz值)
+							什么东西进行什么动作（可用时态修饰，） 某物1真对某物2进行某种行为--->导致改变某物1或某物2的状态 ---> 状态的改变又会导致新的行为产生
+
+
+
+----------------------------
+
 智能的核心算法
 
 	记忆，预测是智能的体现。
@@ -164,6 +241,8 @@ Attribute 关系概念
 	表达条件概念  （如果...那么...）
 	
   时序，因果，条件这些概念从某种意义上可以看做是同一种概念，只是在具体条件约束上有少许不同而已
+
+
 
 
 
