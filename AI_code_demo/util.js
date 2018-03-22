@@ -1,5 +1,5 @@
 var loggerConfig ={
-    showTriggerMsg:false,
+    showTriggerMsg:true,
 }
 
 var loggerType = {
@@ -17,6 +17,41 @@ class Logger{
         }
     }
 }
+
+
+
+//计数器
+var counter = {
+    cnt:0,
+    increase:function(){
+        this.cnt++;
+        return this.cnt;
+    },
+}
+
+class Signal{
+
+    newId(){
+        return counter.increase();
+    }
+
+    constructor(signalData,sourceSignalId,signalType){
+
+        this.id          = this.newId()
+        this.timestamp   = new Date().getTime();
+        this.data        = signalData;                
+        this.sourceSignalId  = sourceSignalId;       
+        this.SignalType = signalType;
+        ///this.charIndex = xxxx;
+    }  
+    
+    
+    // toString(){
+        //当前vscode调试器不支持自定义格式输出
+    //     return `${ this.SignalType }:${this.data.toString()} [${this.id} <-- ${this.sourceSignalId}]`
+    // }
+}
+
 
 
 // 作者：文兴
@@ -65,6 +100,8 @@ var extend = (function() {
 
 
 module.exports = {extend: extend,
-                    Logger:Logger,
-                    loggerType: loggerType
+                    Logger          : Logger,
+                    loggerType      : loggerType,
+                    Signal          : Signal,
+                  
                  };

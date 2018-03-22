@@ -24,6 +24,27 @@ var TriggerTagsDef ={
 
 }
 
+
+//此词典/枚举用于标记信号对象【 Signal 】的类型，不同类型有不同的处理方式（有的类型有特定的触发器处理）
+var SignalTypeDef ={
+    CharInSentence:"一句话里面的单个字符",
+    Task_SentenceSplitWord:"任务：句子的分词",
+    WordAggregation:"聚合成了词语",
+    SingleCharWord:"这是一个单字词语",
+    WordExpect:"期待/预测是这个词",
+    SentenceIsEnd:"表示一句话的结束",
+    ConceptModel:"表示此信号是个概念模型", //当信号是ConceptModel时，表示 sign.Data属性是个model对象，该对象有modelType属性用以区分概念模型的类型
+    TestTempType:"临时使用的，没有特殊意义",
+    TestTempType22:"22临时使用的，没有特殊意义",
+
+
+}
+
+var ConceptModelTypeDef ={
+    Question:"疑问概念模型",
+
+}
+
 var DataTagsDef ={
     GrammarPraseFinish :"语法分析完成",
     SemanticsPraseFinish :"语义分析完成",
@@ -34,14 +55,14 @@ var DataTagsDef ={
 
 }
 
-var TypesDef = {
-    ModelType:ModelTypeDef,
-    MessageType:MessageTypeDef,
-    TriggerTags:TriggerTagsDef,
-    DataTags:DataTagsDef
-}
-
-module.exports=TypesDef;
+module.exports={
+    ModelType       :   ModelTypeDef,
+    MessageType     :   MessageTypeDef,
+    TriggerTags     :   TriggerTagsDef,
+    DataTags        :   DataTagsDef,
+    SignalType      :   SignalTypeDef,
+    ConceptModelType:   ConceptModelTypeDef
+};
 
 
 

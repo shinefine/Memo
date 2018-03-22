@@ -1,6 +1,8 @@
 let  typesDef  = require("./CommonTypeDef");
 var  util = require('./util');  //要使用日志 对象 Logger
 
+var Signal = util.Signal;
+
 let  messageType = typesDef.MessageType;
 let  triggerTags = typesDef.TriggerTags;
 let  dataTags    = typesDef.DataTags;
@@ -8,52 +10,26 @@ let  dataTags    = typesDef.DataTags;
 
 let logger = new util.Logger(util.loggerType.TriggerLogger)
 
+
+/*
+    使用方式
+    var tig = new Trigger(
+        "触发器名字"
+        ,[ triggerTags.TypeIsGrammarPrase]   //使用枚举值来标记该触发器的功能，用途等特性
+        ,some_func   //返回 true/false 值的函数，该函数接收一个 sigData 参数 对应于 Signal 对象的 data 属性
+        ,some_func  //做某件事的函数，返回值任意，且该返回值会被外部包装成 Signal 对象重新塞入 主流中。
+    )
+
+*/
 class Trigger{    
-    constructor(name,tags,active_rule,active_func,feedbackObj){
+    constructor(name,tags,active_rule,active_func){
         this.name = name;
-        this.tags = tags;
-        this.active_func = active_func;        
-        this.active_rule = active_rule;        
-        this.feedbackObj = feedbackObj;
+        this.tags = tags;       
+        this.active_rule = active_rule;    
+        this.active_func = active_func;            
+       
     }
-
-    //外部通知我有了新的消息，
-    onMessage(task){      
-
-        //我是否会被激活取决于消息的类型，若是我被激活，则执行相关的函数
-        if(this.active_rule(task.msgData)){
-
-            logger.message(`触发器${this.name}激活`); //----日志
-
-            var result = this.active_func(task.msgData);
-
-            this.complete(task,result);
     
-        }
-    }
-
-
-    complete(task,result){               
-
-        result.dataType = "undef";
-        if(this.hasTag(triggerTags.TypeIsGrammarPrase)){
-            result.dataType = dataTags.GrammarPraseFinish;
-            
-        }
-        if(this.hasTag(triggerTags.TypeIsDoMemoryQuery)){
-            result.dataType = dataTags.MemoryQueryFinish;
-        }
-        if(this.hasTag(triggerTags.TypeIsSayWord)){
-            result.dataType = dataTags.SayWordFinish;
-        }
-
-        if(this.feedbackObj){
-
-            this.feedbackObj.onTriggerCompleted(task,result);
-        }
-        
-    }
-
     hasTag(tag){
         return this.tags.includes(tag);
     }
